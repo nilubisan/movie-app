@@ -2,6 +2,10 @@
 import { onMounted } from 'vue';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { useFetch } from './app/fetch';
+
+const { isLoading, isError, data, error } = useFetch()
+console.log(data);
 
 onMounted(() => {
   const firebaseConfig = {
@@ -15,23 +19,18 @@ onMounted(() => {
         const app = initializeApp(firebaseConfig);
         getAnalytics(app);
 })
+
+
 </script>
 
 <template>
-  <div>Здесь будет сайт приложения</div>
+  <span v-if="isLoading">Loading...</span>
+  <span v-else-if="isError">Error: {{ error?.message }}</span>
+  <ul v-else>
+    <li v-for="item in data" :key="item?.id">{{ item?.original_title }}</li>
+  </ul>
+
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
 </style>
