@@ -1187,6 +1187,13 @@ vue-demi@>=0.14.5, vue-demi@^0.14.7:
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.14.8.tgz#00335e9317b45e4a68d3528aaf58e0cec3d5640a"
   integrity sha512-Uuqnk9YE9SsWeReYqK2alDI5YzciATE0r2SkA6iMAtuXvNTMNACJLJEXNXaEy94ECuBe4Sk6RzRU80kjdbIo1Q==
 
+vue-router@4:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.4.0.tgz#128e3fc0c84421035a9bd26027245e6bd68f69ab"
+  integrity sha512-HB+t2p611aIZraV2aPSRNXf0Z/oLZFrlygJm+sZbdJaW6lcFqEDQwnzUBXn+DApw+/QzDU/I9TeWx9izEjTmsA==
+  dependencies:
+    "@vue/devtools-api" "^6.5.1"
+
 vue-template-compiler@^2.7.14:
   version "2.7.16"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.7.16.tgz#c81b2d47753264c77ac03b9966a46637482bb03b"
